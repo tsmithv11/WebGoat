@@ -80,7 +80,7 @@ public class ProfileUploadRetrieval extends AssignmentEndpoint {
 
   @GetMapping("/PathTraversal/random-picture")
   @ResponseBody
-  public ResponseEntity<?> getProfilePicture(HttpServletRequest request) {
+  public ResponseEntity<?> getProfilePicMeUp(HttpServletRequest request) {
     var queryParams = request.getQueryString();
     if (queryParams != null && (queryParams.contains("..") || queryParams.contains("/"))) {
       return ResponseEntity.badRequest()
